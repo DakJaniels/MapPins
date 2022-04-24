@@ -1,5 +1,30 @@
 local AddonName="MapPins"
 local Bosses={
+--High Isle. Provided by art1ink.
+u34_firepotcave={{.642,.476,3275}},--Esh'curnu the Bahemoth
+u34_hauntedsepulcherint={{.353,.472,3277}},--Lord Leobet
+u34_breakwatercave={{.104,.673,3276}},--Brineclaw
+u34_shipwreckshoalsint={{.295,.832,3278}},--Reef Viper & Captine Ithala
+u34_whalefall_cay={{.401,.303,3279}},--Jailer Mannick
+u34_coralcliffsext={{.557,.718,3280}},--Madena Bracques
+u34_ghosthaven={--Ghost Haven Bay Conqueror
+{.478,.618,3282,3},--Captain Tuvacca
+{.406,.466,3282.4},--Captain Marlay
+{.484,.244,3282,5},--Captain Fauvette
+},
+u34_ghosthavenEXT={--Ghost Haven Bay Conqueror & Ghost Haven Bay Group Event]
+{.791,.518,3281},--Hadilid Broodmother
+{.575,.203,3282,2},--Razor Fangs
+{.672,.801,3282,1},--Captain Altait
+},
+u34_TOTS_Crypt_Intt={{.51,.653,3283}},--The Crimson Mother (Crimson Coin Group Event)
+u34_crimsoncoin_EXT={
+{.383,.631,3284,1},--Blighted Carapace
+{.551,.334,3284,2},--Anya Mouz thr Unclean
+{.694,.699,3284,3},--Chillspine
+{.838,.478,3284,4},--Crimson Apprentice
+{.691,.245,3284,5},--Shambleback
+},
 --The Deadlands. Provided by art1ink.
 u32_dreaded_refuge_int={{.501,.443,3135}},--The Brandfire Reformatory (Kynreeve Brosuroth)
 u32_folly={{.547,.451,3136}},--False Martyrs' Folly (Kurkron the Mangler)
@@ -246,7 +271,7 @@ khartagpoint={{.757,.195,1858,1}},
 ashalmawia02={{.349,.315,1859,1}},
 hallsofregulation_2={{.728,.402,2016,1}},
 }
-local BossesAchievements={[2996]=true,[2997]=true,[2971]=true,[2714]=true,[2715]=true,[2717]=true,[2718]=true,[2440]=true,[2442]=true,[2444]=true,[2445]=true,[744]=true,[734]=true,[741]=true,[742]=true,[733]=true,[732]=true,[377]=true,[738]=true,[739]=true,[740]=true,[1238]=true,[1239]=true,[1052]=true,[2095]=true,[2096]=true,[2181]=true,[2182]=true,[2007]=true,[300]=true,[470]=true,[1235]=true,[1236]=true,[1855]=true,[1846]=true,[1057]=true,[1058]=true,[1059]=true,[1061]=true,[1062]=true,[1063]=true,[1064]=true,[1425]=true,[1857]=true,[1691]=true,[1523]=true,[1856]=true,[1854]=true,[368]=true,[370]=true,[374]=true,[376]=true,[390]=true,[396]=true,}
+local BossesAchievements={[3284]=true,[3283]=true,[3282]=true,[3281]=true,[3280]=true,[3279]=true,[3278]=true,[3277]=true,[3276]=true,[3275]=true,[2996]=true,[2997]=true,[2971]=true,[2714]=true,[2715]=true,[2717]=true,[2718]=true,[2440]=true,[2442]=true,[2444]=true,[2445]=true,[744]=true,[734]=true,[741]=true,[742]=true,[733]=true,[732]=true,[377]=true,[738]=true,[739]=true,[740]=true,[1238]=true,[1239]=true,[1052]=true,[2095]=true,[2096]=true,[2181]=true,[2182]=true,[2007]=true,[300]=true,[470]=true,[1235]=true,[1236]=true,[1855]=true,[1846]=true,[1057]=true,[1058]=true,[1059]=true,[1061]=true,[1062]=true,[1063]=true,[1064]=true,[1425]=true,[1857]=true,[1691]=true,[1523]=true,[1856]=true,[1854]=true,[368]=true,[370]=true,[374]=true,[376]=true,[390]=true,[396]=true,}
 --[[--World event
 elsweyr={{.484,.221},{.442,.671},{.23,.632},{.443,.671},{.669,.491},{.293,.623},{.421,.462},{.635,.265},{.445,.527}},
 clockwork={{.634,.604,2047}},
@@ -254,33 +279,34 @@ clockwork={{.634,.604,2047}},
 local SkyShards={
 --High Isle. Provided by art1ink.
 u34_systreszone={
-{.514,.782,3270,2},
-{.26,.852,3270,3},
-{.143,.566,3270,4},
-{.312,.34,3270,5},
-{.323,.62,3270,6},
-{.5,.654,3270,7},
-{.782,.451,3270,8},
-{.8,.263,3270,9},
-{.668,.206,3270,10},
-{.864,.404,3270,11},
-{.62,.689,3270,12},
-{.33,.912,3270,13},
-{.214,.446,3270.14},
-{.275,.706,3270,15},
-{.48,.485,3270,16},
-{.816,.202,3270,17},
-{.602,.356,3270,18},
+{.291,.75,3270,1},--High above the river across from the Firepot
+{.514,.782,3270,2},--Under the middle bridge spanning Loch Abhain
+{.26,.852,3270,3},--By a beach near the bridge on High Isle's southern coast
+{.143,.566,3270,4},--Hidden in the rocks above Jheury's Cove on High Isle
+{.312,.34,3270,5},--Just west of a pointed rock on High Isle's northernmost beach
+{.323,.62,3270,6},--In the shadow of All Flags Castle's north wall
+{.5,.654,3270,7},--Overlooking the volcanic vent north of Tor Draioch
+{.782,.451,3270,8},--In the heart of the river canyon east of Amenos Station
+{.8,.263,3270,9},--On the shore of the Flooded Coast below Snake's Eye View
+{.668,.206,3270,10},--By a bay full of wrecked ships along Skulltooth Coast
+{.864,.404,3270,11},--Follow a climbing path on the southern side of Ghost Haven Bay
+{.62,.689,3270,12},--In the hedge maze of the Spire of the Crimson Coin
+{.33,.912,3270,13},--On a ledge above a pool in the back of Breakwater Cave
+{.214,.446,3270.14},--Guarded by the dead in Death's Valor Keep
+{.275,.706,3270,15},--At one end of a natural bridge in the heart of the Firepot
+{.48,.485,3270,16},--At the end of a winding path high above Shipwreck Shoals
+{.816,.202,3270,17},--By a blue tree within the caverns of Coral Cliffs
+{.602,.356,3270,18},--Hidden high among the rocky ridges of Whalefall
 },
-u34_ghosthaven={{.628,.591,3270,11}},
-u34_ghosthavenEXT={{.833,.733,3270,11}},
-u34_crimsoncoin_EXT={{.773,.512,3270,12}},
-u34_breakwatercave={{.517,.195,3270,13}},
-u34_hauntedsepulcherext={{.484,.926,3270,14}},
-u34_firepotcave={{.372,.605,3270,15}},
-u34_shipwreckshoalsext={{.359,.658,3270,16}},
-u34_coralcliffsint={{.316,.346,3270,17}},
-u34_whalefall_cay={{.472,.589,3270,18}},
+u34_ghosthaven={{.628,.591,3270,11}},--Follow a climbing path on the southern side of Ghost Haven Bay
+u34_ghosthavenEXT={{.833,.733,3270,11}},--Follow a climbing path on the southern side of Ghost Haven Bay
+u34_crimsoncoin_EXT={{.773,.512,3270,12}},--In the hedge maze of the Spire of the Crimson Coin
+u34_breakwatercave={{.517,.195,3270,13}},--On a ledge above a pool in the back of Breakwater Cave
+u34_hauntedsepulcherext={{.484,.926,3270,14}},--Guarded by the dead in Death's Valor Keep
+u34_firepotcave={{.372,.605,3270,15}},-- At one end of a natural bridge in the heart of the Firepot.
+u34_shipwreckshoalsext={{.359,.658,3270,16}},--At the end of a winding path high above Shipwreck Shoals
+u34_coralcliffsint={{.316,.346,3270,17}},--By a blue tree within the caverns of Coral Cliffs
+u34_whalefall_cay={{.472,.589,3270,18}},--Hidden high among the rocky ridges of Whalefall
 --Deadland. Provided by art1ink.
 u32deadlandszone={
 {.464,.677,3140,1},
@@ -592,6 +618,14 @@ hallsofregulation_2={{.728,.402,1844,5}},
 }
 local SkyShardsAchievements={[3270]=true,[3140]=true,[2982]=true,[2687]=true,[2562]=true,[2461]=true,[2291]=true,[556]=true,[695]=true,[405]=true,[557]=true,[408]=true,[398]=true,[686]=true,[727]=true,[912]=true,[694]=true,[693]=true,[692]=true,[547]=true,[688]=true,[409]=true,[682]=true,[683]=true,[431]=true,[684]=true,[748]=true,[685]=true,[554]=true,[687]=true,[397]=true,[515]=true,[407]=true,[689]=true,[1160]=true,[1320]=true,[1347]=true,[1342]=true,[1843]=true,[1844]=true,[1845]=true}
 local Lorebooks={
+--High Isle. Provided by art1ink.
+u34_systreszone={
+{.528,.699,9,7},--Triumphs of a Monarch, Ch. 10
+{.539,.53,2,4},--The Bretons: Mongrels or Paragons?
+{.314,.472,2,10},--Wayrest, Jewel of the Bay
+{.601,.866,1,7},--Varieties of Faith: The Bretons
+},
+u34_gonfalonbaycity={{.919,.614,1,7}},--Varieties of Faith: The Bretons
 --The Deadlands Provided by art1ink
 u32_fargravezone={
 {.527,.239,14,5},-- Myths of Sheogorath, Volume 1
@@ -845,7 +879,10 @@ vvardenfell={{.404,.809,20,3},{.882,.612,20,3},{.34,.528,20,3},{.502,.244,8,4},{
 hewsbane={{.382,.595,11,3},{.446,.592,18,5}},
 }
 local TreasureMaps={
-u32deadlandszone={--Provided by art1ink:
+--Provided by art1ink
+u34_gonfalonbaycity={{.92,.63,187668}},--High Isle CE Treasure Map I
+u34_systreszone={{.601,.868,187668}},--High Isle CE Treasure Map I
+u32deadlandszone={--Provided by art1ink
 {.245,.806,183005},--The Deadlands Treasure Map I
 {.763,.385,183006},--The Deadlands Treasure Map II
 },
@@ -917,14 +954,14 @@ local UnknownPOI={
 [1318]={ --High Isle
 [1]={"Gonfalon Bay",32},
 [2]={"Castle Navire",31},
---[3] = "Steadfast Manor",
---[4] = "Stonelore Grove",
+[3]={"Steadfast Manor",31},
+[4]={"Stonelore Grove",21},
 [5]={"Garick's Rest",31},
---[6] = "All Flags Islet",
---[7] = "Tor Draioch",
+[6]={"All Flags Islet",31},
+[7]={"Tor Draioch",31},
 [8]={"Amenos Station",31},
 [9]={"Brokerock Mine",31},
---[10] = "Skulltooth Coast",
+[10]={"Skulltooth Coast",12},
 [11]={"Spire of the Crimson Coin",13},
 [12]={"Ghost Haven Bay",13},
 [13]={"Breakwater Cave",3},
@@ -962,14 +999,14 @@ local UnknownPOI={
 [47]={"Volcanic Vent",26},
 [48]={"Trappers Peak Wayshrine",1},
 [49]={"Spriggan's Crown",2},
---[50] = "Port Navire",
---[52] = "Druid's Gate",
+[50]={"Port Navire",12},
+[52]={"Druid's Gate",28},
 [53]={"Gonfalon Head Lighthouse",23},
 [54]={"Westbay Wayshrine",1},
 [56]={"Abhain Chapel",9},
 [61]={"Augury Monoliths",2},
---[63] = "Jheury's Cove",
---[66] = "Dufort Shipyards",
+[63]={"Jheury's Cove",12},
+[66]={"Dufort Shipyards",12},
 [68]={"Gonfalon Square Wayshrine",1},
 [72]={"Serpents Hollow Wayshrine",1},
 [73]={"Flooded Coast Wayshrine",1},
@@ -3944,6 +3981,7 @@ local FishingZones={
 	[783]=2861,--Markarth
 	[834]=2981,--Blackwood
 	[857]=3144,--Deadlands
+	[883]=3269,--High Isle
 	bleakrockvillage=493,
 	murkmire=2295,rootwhisper=2295,brightthroatvillage=2295,lilmothcity=2295,
 	imperialcity=1186,

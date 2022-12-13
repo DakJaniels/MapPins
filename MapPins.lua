@@ -1429,9 +1429,12 @@ u36_galenisland={
 {.22,.582,2,10},--Wayrest, Jewel of the Bay
 {.268,.244,1,9},--Wyresses: The Name-Daughters
 {.214,.658,1,7},--Varieties of Faith: The Bretons
+{.200,.659,9,5},--Triumphs of a Monarch, Ch. 3
+{.31,.401,2,3},--The Knightly Orders of High Rock
 },
 u36_VastyrCity={
 {.766,.664,1,5},--Guide to the Daggerfall Covenant
+{.464,.372,9,5},--Triumphs of a Monarch, Ch. 3
 {.517,.366,1,7}},--Varieties of Faith: The Bretons
 u36_VastyrCityCastle2ndFl={{.563,.669,1,7}},--Varieties of Faith: The Bretons
 --High Isle. Provided by art1ink.

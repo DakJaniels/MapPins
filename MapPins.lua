@@ -43,6 +43,7 @@ local Localization={
 		Blackwood="Blackwood",
 		Greymoor="Greymoor",
 		High_Isle="High Isle",
+		Necrom="Necrom",
 		},
 	ru={
 		--Water
@@ -82,6 +83,7 @@ local Localization={
 		Greymoor="Западный скайрим",
 		Blackwood="Черный лес",
 		High_Isle="Высокий Остров",
+		Necrom="Некром",
 		},
 	de={--provided by Neverlands 1.89
 		--Water
@@ -111,6 +113,7 @@ local Localization={
 		Orsinium_world_event="Zufällige Begegnungen",
 		Summerset_world_event="Zufällige Begegnungen",
 		Random_Encounters="Zufällige Begegnungen",
+		Necrom="Necrom",
 		},
 	fr={
 		--Water
@@ -147,6 +150,7 @@ local Localization={
 		Blackwood="Le Bois Noir",
 		Greymoor="Greymoor",
 		High_Isle="L'Île Haute",
+		Necrom="Necrom",
 		},
 	br={
 		--Water
@@ -186,6 +190,7 @@ local Localization={
 		Blackwood="Blackwood",
 		Greymoor="Greymoor",
 		High_Isle="Alta Ilha",
+		Necrom="Necrom",
 		},
 	ua={--provided by Astaro'I, Eric_m 1.89
 		--Lake="озерна вода",Foul="брудна вода",River="річкова вода",Salt="солона вода",Oily="масляниста вода",Mystic="містична вода",Running="проточна вода",--Water
@@ -224,6 +229,7 @@ local Localization={
 		Orsinium_world_event="Світові події Орсініума",
 		Summerset_world_event="Світові події Саммерсету",
 		Random_Encounters="Випадкові зустрічі",
+		Necrom="Necrom",
 		},
 	it={	--provided by windedsilver 1.91
 		--Water
@@ -262,6 +268,7 @@ local Localization={
 		Orsinium_world_event="Incontri Casuali",
 		Summerset_world_event="Incontri Casuali",
 		Random_Encounters="Incontri Casuali",
+		Necrom="Necrom",
 		},
 }
 local lang=GetCVar("language.2") if not Localization[lang] then lang="en" end
@@ -271,6 +278,29 @@ end
 
 --Data base
 local Bosses={
+--Necrom Provided by art1ink.
+u38_eggmine={{.513,.464,3620}},--Anchre Egg Mine Explorer
+u38_camonnaruhn={{.587,.214,3621}},--Camonnaruhn Explorer
+u38_quires_wind={{.25,.725,3622}},--Quires Wind Explorer
+u38_disquiet_study={{.442,.628,3623}},--Disquiet Study Explore
+U38_CorpuscleBight_01_Base_0={{.52,.113,3624}},--Fathoms Drift Explorer
+u38_apogee_wind={{.53,.795,3625}},--Apogee Explorer
+U38_underweave_process02={--The Underweave Conqueror
+{.327,.311,3659,3},--Qacath the Silent
+},
+U38_underweave_heart={{.512,.844,3659,4}},--Kynreve Kev'ni
+U38_underweave_central={
+{.498,.796,3659,1},--Caz'iunes the Executioner
+{.594,.353,3657},--All-Seeing Ky'zuu (Group Event)
+},
+u38_gorne_main_0={--Gorne Conqueror
+{.579,.126,3660,1},--Stupulag
+{.154,.215,3660,2},--Zygiite
+{.885,.593,3660,3},--Solenm
+{.6,.68,3660,4},--Staxuira
+{.121,.548,3660,5},--Keeag
+{.567,.421,3658},--Gorne Group Event
+},
 --Firesong Provided by art1ink.
 u36_galenisland={
 {.493,.45,3548},--Preserver of Galen Hunter
@@ -557,7 +587,7 @@ khartagpoint={{.757,.195,1858,1}},
 ashalmawia02={{.349,.315,1859,1}},
 hallsofregulation_2={{.728,.402,2016,1}},
 }
-local BossesAchievements={[3490]=true,[3489]=true,[3284]=true,[3283]=true,[3282]=true,[3281]=true,[3280]=true,[3279]=true,[3278]=true,[3277]=true,[3276]=true,[3275]=true,[2996]=true,[2997]=true,[2971]=true,[2714]=true,[2715]=true,[2717]=true,[2718]=true,[2440]=true,[2442]=true,[2444]=true,[2445]=true,[744]=true,[734]=true,[741]=true,[742]=true,[733]=true,[732]=true,[377]=true,[738]=true,[739]=true,[740]=true,[1238]=true,[1239]=true,[1052]=true,[2095]=true,[2096]=true,[2181]=true,[2182]=true,[2007]=true,[300]=true,[470]=true,[1235]=true,[1236]=true,[1855]=true,[1846]=true,[1057]=true,[1058]=true,[1059]=true,[1061]=true,[1062]=true,[1063]=true,[1064]=true,[1425]=true,[1857]=true,[1691]=true,[1523]=true,[1856]=true,[1854]=true,[368]=true,[370]=true,[374]=true,[376]=true,[390]=true,[396]=true,}
+local BossesAchievements={[3660]=true,[3659]=true,[3658]=true,[3657]=true,[3625]=true,[3624]=true,[3623]=true,[3622]=true,[3621]=true,[3620]=true,[3490]=true,[3489]=true,[3284]=true,[3283]=true,[3282]=true,[3281]=true,[3280]=true,[3279]=true,[3278]=true,[3277]=true,[3276]=true,[3275]=true,[2996]=true,[2997]=true,[2971]=true,[2714]=true,[2715]=true,[2717]=true,[2718]=true,[2440]=true,[2442]=true,[2444]=true,[2445]=true,[744]=true,[734]=true,[741]=true,[742]=true,[733]=true,[732]=true,[377]=true,[738]=true,[739]=true,[740]=true,[1238]=true,[1239]=true,[1052]=true,[2095]=true,[2096]=true,[2181]=true,[2182]=true,[2007]=true,[300]=true,[470]=true,[1235]=true,[1236]=true,[1855]=true,[1846]=true,[1057]=true,[1058]=true,[1059]=true,[1061]=true,[1062]=true,[1063]=true,[1064]=true,[1425]=true,[1857]=true,[1691]=true,[1523]=true,[1856]=true,[1854]=true,[368]=true,[370]=true,[374]=true,[376]=true,[390]=true,[396]=true,}
 local SkyShards={
 u38_apocrypha={--Necrom Provided by art1ink
 {.68,.497,3672,5,532},
@@ -572,6 +602,7 @@ u38_apocrypha={--Necrom Provided by art1ink
 {.39,.191,3672,16,543},
 {.333,.386,3672,18,545},
 },
+U38_underweave_central={{.351,.619,3672,11}},
 u38_disquiet_study={{.452,.299,3672,14,541}},
 u38_quires_wind={{.564,.656,3672,15,542}},
 U38_CorpuscleBight_02_Base_0={{.424,.121,3672,16,543}},
@@ -583,8 +614,7 @@ u38_telvannipeninsula={
 {.67,.608,3672,4,531},
 {.719,.319,3672,12,539},
 {.787,.502,3672,13,540},
-{.242,.69,3672,17,544},
-},
+{.242,.69,3672,17,544}},
 u38_camonnaruhn={{.54,.512,3672,17,544}},
 u38_eggmine={{.289,.529,3672,13,540}},
 u38_gorne_main_0={{.404,.332,3672,12,539}},
@@ -1465,7 +1495,12 @@ u38_telvannipeninsula={
 {.449,.556,11,8},-- Where Magical Paths Meet
 {.588,.681,20,1},-- Ancestors and the Dunmer (Abridged)
 },
+u38_apocrypha={
+{.714,.854,17,1},--The Book of Daedra
+{.577,.548,8,9},--Fragmentae Abyssum Hermaeus Morus
+},
 u38_disquiet_study={{.491,.364,8,6}},--Modern Heretics
+u38_ciphersmidden_city={{.447,.46,8,9}},--Fragmentae Abyssum Hermaeus Morus
 u38_teldreloth_ext={{.418,.687,20,1}},-- Ancestors and the Dunmer (Abridged)
 u38_Necrom={
 {.582,.524,8,4},--The House of Troubles
@@ -1797,13 +1832,15 @@ u38_telvannipeninsula={--Provided by Gamer1986PAN
 {.289,.385,198100},--Telvanni Peninsula Treasure Map IV
 {.732,.551,198291},--Blacksmith Survey: Telvanni Peninsula
 {.597,.504,198297},--Woodworker Survey: Telvanni Peninsula
-{.488,.756,198294}},--Jewelry Crafting Survey: Telvanni Peninsula
+{.488,.756,198294},--Jewelry Crafting Survey: Telvanni Peninsula
+{.214,.456,197842}}, -- Hand of Almalexia Clue
 u38_apocrypha={--Provided by Gamer1986PAN
-{.384,.465,196203}, -- Apocrypha CE Treasure Map
-{.754,.400,198101}, -- Apocrypha Treasure Map I
-{.454,.338,198102}, -- Apocrypha Treasure Map II
-{.798,.7089,198290}, -- Clothier Survey: Apocrypha
-{.696,.4008,198289}}, -- Enchanter Survey: Apocrypha
+{.384,.465,196203},--Apocrypha CE Treasure Map
+{.754,.400,198101},--Apocrypha Treasure Map I
+{.454,.338,198102},--Apocrypha Treasure Map II
+{.798,.7089,198290},--Clothier Survey: Apocrypha
+{.696,.4008,198289},--Enchanter Survey: Apocrypha
+{.400,.388,198288}},--Alchemist Survey: Apocrypha
 u36_galenisland={--Provided by art1ink
 {.44,.247,192370},--Galen Treasure Map I
 {.403,.413,192371},--Galen Treasure Map II
@@ -1882,6 +1919,7 @@ stonefalls={
 ebonheart={{.540,.091,57746,1}},
 deshaan={
 {.18,.48,187890},--Hlaalu Councilor Clue (Deshaan)
+{.526,.569,197843},--Mercymother Elite Clue
 {.259,.550,43661},{.184,.472,43662},{.463,.405,43663},{.758,.561,43664},{.899,.549,43665},{.792,.509,43666},{.352,.640,44934},{.476,.420,57748,1},{.787,.408,57751,1},{.238,.481,57755,1},{.148,.496,57772,1},{.637,.550,57817,1},{.485,.615,139426,4}},
 shadowfen={{.483,.701,153647,"shield"},{.369,.150,43667},{.708,.392,43668},{.704,.701,43669},{.609,.611,43670},{.406,.469,43671},{.238,.564,43672},{.642,.455,44943},{.751,.430,57758,1},{.358,.265,57775,1},{.795,.852,57789,1},{.400,.695,57803,1},{.580,.679,57820,1},{.888,.686,139428,4}},
 eastmarch={{.431,.587,153643,"2haxe"},{.441,.374,43673},{.313,.458,43674},{.430,.591,43675},{.366,.598,43676},{.736,.660,43677},{.605,.539,43678},{.713,.583,44935},{.680,.612,57761,1},{.379,.604,57778,1},{.353,.288,57801,1},{.530,.414,57807,1},{.452,.497,57823,1},{.392,.686,139440,4}},
@@ -3988,7 +4026,7 @@ local UnknownPOItexture={
 [44]="/esoui/art/icons/poi/poi_group_portal_incomplete.dds",
 [45]="/esoui/art/icons/poi/poi_mushromtower_incomplete.dds"
 }
-function ShowPoiIcons()for i,icon in pairs(UnknownPOItexture) do d("["..i.."]|t26:26:"..icon.."|t")end end
+--function ShowPoiIcons()for i,icon in pairs(UnknownPOItexture) do d("["..i.."]|t26:26:"..icon.."|t")end end
 local MundusDescription={
 [13940]="Increases Weapon Damage",
 [13943]="Increases Maximum Magicka",
@@ -4476,6 +4514,13 @@ u32deadlandszone={
 [26]={{.874,.464,1},{.498,.666,1},{.545,.571,1},{.68,.417,1},{.771,.41,1},{.773,.339,1},{.681,.304,1},{.457,.556,1},{.326,.527,1},{.394,.515,1},{.29,.576,1},{.249,.725,1},{.35,.687,1},{.492,.593,1},{.568,.328,1},{.55,.444,1},{.193,.561,1},{.78,.254,1}},--Oblivon portals. Provided by art1ink
 [62]={{.812,.422,436}},--Ironclad Sarcoshroud
 },
+u38_apocrypha={--Necrom
+[78]={--Syzygy
+{.888,.596,3678,1},--Aberrant Hushed 1
+{.737,.637,3678,2},--Aberrant Hushed 2
+{.764,.766,3678,3},--Aberrant Hushed 3
+{.49,.699,3678,4}},--Aberrant Hushed 4
+},
 u34_systreszone={--High Isle & Amenos
 [26]={{.129,.629,5},{.233,.759,5},{.249,.596,5},{.256,.485,5},{.269,.865,5},{.308,.439,5},{.424,.788,5},{.426,.437,5},{.434,.851,5},{.452,.657,5},{.493,.517,5},{.560,.629,5},{.580,.739,5},{.619,.339,5},{.745,.422,5},{.746,.336,5},{.789,.265,5},{.835,.304,5},{.835,.385,5},},--Lava Lasher
 [62]={--Antiquity leads provided by Kelinmiriel for remosito
@@ -4862,7 +4907,7 @@ southernelsweyr={	--Topal Corsair
 elsweyr={{.484,.221},{.442,.671},{.23,.632},{.443,.671},{.669,.491},{.293,.623},{.421,.462},{.635,.265},{.445,.527}},
 clockwork={{.634,.604,2047}},
 --]]
-local AchievementsId={[3224]=75,[3298]=74,[3299]=76,[3295]=77,[3080]=67,[3081]=64,[3082]=65,[3083]=63,[1824]=30,[1712]=31,[1382]=32,[872]=33,[869]=34,[871]=34,[873]=34,[1247]=36,[1250]=38,[1349]=39,[716]=40,[2211]=42,[2171]=43,[1827]=44,[704]=45,[1082]=46,[1958]=47,[2320]=48,[2341]=49,[2357]=53,[2669]=59}
+local AchievementsId={[3678]=78,[3224]=75,[3298]=74,[3299]=76,[3295]=77,[3080]=67,[3081]=64,[3082]=65,[3083]=63,[1824]=30,[1712]=31,[1382]=32,[872]=33,[869]=34,[871]=34,[873]=34,[1247]=36,[1250]=38,[1349]=39,[716]=40,[2211]=42,[2171]=43,[1827]=44,[704]=45,[1082]=46,[1958]=47,[2320]=48,[2341]=49,[2357]=53,[2669]=59}
 local ZoneAchievement={
 auridon=1,
 grahtwood=2,
@@ -5283,9 +5328,9 @@ local CustomPins={	--Types
 	[1]={name="pinType_Delve_bosses",done=false,id={},pin={},maxDistance=0.05,level=30,texture="/esoui/art/icons/poi/poi_groupboss_incomplete.dds",k=1.25},--tint=ZO_ColorDef:New(1,1,1,1),
 	[2]={name="pinType_Delve_bosses_done",done=true,id={},pin={},maxDistance=0.05,level=30,texture="/esoui/art/icons/poi/poi_groupboss_complete.dds",k=1.25},
 	[3]={name="pinType_Skyshards",done=false,id={},pin={},maxDistance=0.05,level=100,texture="/esoui/art/mappins/skyshard_seen.dds",k=1.40},
---	[4]={name="pinType_Skyshards_done",done=true,id={},pin={},maxDistance=0.05,level=30,texture="/esoui/art/tutorial/gamepad/achievement_categoryicon_skyshards.dds",k=1.38},
+	[4]={name="pinType_Skyshards_done",done=true,id={},pin={},maxDistance=0.05,level=30,texture="/esoui/art/tutorial/gamepad/achievement_categoryicon_skyshards.dds",k=1.38},
 	[5]={name="pinType_Lore_books",done=false,id={},pin={},maxDistance=0.05,level=100,texture="/"..AddonName.."/Lorebook_1.dds",k=1,tint=ZO_ColorDef:New(.6,.6,1,.8)},
---	[6]={name="pinType_Lore_books_done",done=true,id={},pin={},maxDistance=0.05,level=30,texture="/"..AddonName.."/Lorebook_2.dds",k=1,tint=ZO_ColorDef:New(.6,.6,1,.8)},
+	[6]={name="pinType_Lore_books_done",done=true,id={},pin={},maxDistance=0.05,level=30,texture="/"..AddonName.."/Lorebook_2.dds",k=1,tint=ZO_ColorDef:New(.6,.6,1,.8)},
 	[6]={name="pinType_Treasure_Maps",done=false,id={},pin={},maxDistance=0.05,level=101,texture=function(self) return self.m_PinTag.texture end,def_texture="/"..AddonName.."/Treasure_1.dds",k=1.4},
 	[7]={name="pinType_Treasure_Chests",done=false,id={},pin={},maxDistance=0.05,level=100,texture="/"..AddonName.."/Chest_1.dds",k=1.1,tint=ZO_ColorDef:New(1,1,1,.8)},	--,tint=ZO_ColorDef:New(.8,.8,.5,.9)
 	[8]={name="pinType_Unknown_POI",done=false,id={},pin={},maxDistance=0.05,level=10,texture=function(self) return self.m_PinTag.texture end,def_texture="/esoui/art/icons/poi/poi_areaofinterest_incomplete.dds",size=40,tint=ZO_ColorDef:New(.7,.7,.7,.6)},
@@ -5368,9 +5413,12 @@ local CustomPins={	--Types
 		[76]={name="pinType_Inventor_of_Adventure",done=false,ach=3299,maxDistance=0.05,level=101,texture="/esoui/art/miscellaneous/help_icon.dds",k=1,def_texture="/esoui/art/icons/achievement_u34_rds.dds"},
 		[77]={name="pinType_Gonfalon_Bays_Master_Burglar",done=false,ach=3295,maxDistance=0.05,level=101,texture="/esoui/art/icons/servicetooltipicons/servicetooltipicon_bagvendor.dds",k=1,def_texture="/esoui/art/icons/achievement_u34_flavor1_lockbox.dds"},
 		},
+	[28]={section=true,name="pinType_Necrom",id={},pin={},texture="/esoui/art/treeicons/tutorial_idexicon_necrom_up.dds",
+		[78]={name="pinType_Syzygy",done=false,ach=3678,maxDistance=0.05,level=101,texture="/esoui/art/icons/achievement_u38_flavor4.dds",k=1,def_texture="/esoui/art/icons/achievement_u38_flavor4.dds"},
+		},
 	}
 local PinsAva={[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[17]=true,[21]=true}
-local PinsNirn={[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true,[18]=true,[19]=true,[20]=true,[22]=true,[23]=true,[24]=true,[26]=true,[27]=true}
+local PinsNirn={[1]=true,[2]=true,[3]=true,[4]=true,[5]=true,[6]=true,[7]=true,[8]=true,[9]=true,[10]=true,[11]=true,[12]=true,[13]=true,[14]=true,[15]=true,[16]=true,[17]=true,[18]=true,[19]=true,[20]=true,[22]=true,[23]=true,[24]=true,[26]=true,[27]=true,[28]=true}
 local PinsImperial={[3]=true,[4]=true,[5]=true,[7]=true,[8]=true,[25]=true}
 --	/script local name,_,_,icon=GetAchievementInfo(3295) StartChatInput(icon)
 --	/script StartChatInput(ZO_AchievementsContentsCategoriesScrollChildZO_IconHeader12Icon:GetTextureFileName())
@@ -6501,7 +6549,7 @@ local function OnLoad(eventCode,addonName)
 		return id
 	end
 
-	for i=1,27 do
+	for i=1,28 do
 		local filter=CustomPins[i]
 		if filter then
 			if filter.section then

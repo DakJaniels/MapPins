@@ -23,7 +23,7 @@ local Localization={
 		Undaunted="Undaunted",
 		Time_Rifts="Time Rifts",
 		Shrines="Shrines",
-		Fishing_Nodes="Fishing nodes",
+		Fishing_Nodes="Fishing nodes",Fishing_Nodes_done="Fishing Nodes (done)",
 		Volendrung="Volendrung",
 		Antiquities="Antiquities",Antiquity_Leads="Antiquity leads",
 		Imperial_City="Imperial City",IC_Bosses="Bosses",IC_Respawns="Respawns",
@@ -60,7 +60,7 @@ local Localization={
 		Undaunted="Неустрашимые",
 		Time_Rifts="Временные бреши",
 		Shrines="Алтари",
-		Fishing_Nodes="Рыбалка",
+		Fishing_Nodes="Рыбалка",Fishing_Nodes_done="Рыбалка (выполнено)",
 		Volendrung="Волендранг",
 		Antiquities="Древности", Antiquity_Leads="Подсказки древностей",
 		Imperial_City="Имперский город",
@@ -101,7 +101,7 @@ local Localization={
 		Thieves_guild="Thieves Guild",
 		Time_Rifts="Zeitrisse",
 		Shrines="Schreine",
-		Fishing_Nodes="Fischgründe",
+		Fishing_Nodes="Fischgründe",Fishing_Nodes_done="Gesammelte Fischgründe",
 		Clockwork_City="Clockwork City",
 		Antiquities="Antiquitäten", Antiquity_Leads="Fundorte von Spuren",
 		IC_Bosses="Anführer",
@@ -130,7 +130,7 @@ local Localization={
 		Undaunted="Les Indomptables",
 		Time_Rifts="Failles temporelles",
 		Shrines="Autels",
-		Fishing_Nodes="Trous de Pêche",
+		Fishing_Nodes="Trous de Pêche",Fishing_Nodes_done="Trous de Pêche(fini)",
 		Volendrung="Volendrung",
 		Antiquities="Antiquités",Antiquity_Leads="Pistes d'antiquités",
 		Imperial_City="Cité impériale",IC_Bosses="Boss",IC_Respawns="Réapparitions",
@@ -167,7 +167,7 @@ local Localization={
 		Undaunted="Destemidos",
 		Time_Rifts="Fendas Temporais",
 		Shrines="Santuários Vampiro/Lobisomem",
-		Fishing_Nodes="Locais de Pesca",
+		Fishing_Nodes="Locais de Pesca",Fishing_Nodes_done="Locais de Pesca Coletados",
 		Volendrung="Volendrung",
 		Antiquities="Antiguidades", Antiquity_Leads="Pistas de Antiguidades",
 		Imperial_City="Cidade Imperial",
@@ -210,7 +210,7 @@ local Localization={
 		Summerset="Саммерсет",
 		Time_Rifts="Розриви часу",
 		Shrines="Святині",
-		Fishing_Nodes="Місце для рибалки",
+		Fishing_Nodes="Місце для рибалки",Fishing_Nodes_done="Місце для рибалки (виконано)",
 		Clockwork_City="Заводне місто",
 		Murkmire="Муркмайр",
 		Elsweyr="Ельсвейр",
@@ -250,7 +250,7 @@ local Localization={
 		Summerset="Summerset",
 		Time_Rifts="Fenditure Temporali",
 		Shrines="Tempi",
-		Fishing_Nodes="Zone di Pesca",
+		Fishing_Nodes="Zone di Pesca",Fishing_Nodes_done="Zone di Pesca trovati",
 		Clockwork_City="Città Meccanica",
 		Murkmire="Murkmire",
 		Elsweyr="Elsweyr",
@@ -283,7 +283,8 @@ u38_eggmine={{.513,.464,3620}},--Anchre Egg Mine Explorer
 u38_camonnaruhn={{.587,.214,3621}},--Camonnaruhn Explorer
 u38_quires_wind={{.25,.725,3622}},--Quires Wind Explorer
 u38_disquiet_study={{.442,.628,3623}},--Disquiet Study Explore
-U38_CorpuscleBight_01_Base_0={{.52,.113,3624}},--Fathoms Drift Explorer
+U38_CorpuscleBight_01_Base_0={{.520,.113,3624}},--Fathoms Drift Explorer
+U38_CorpuscleBight_02_Base_0={{.520,.113,3624}},--Fathoms Drift Explorer`
 u38_apogee_wind={{.53,.795,3625}},--Apogee Explorer
 U38_underweave_central={
 {.498,.796,3659,1},--Caz'iunes the Executioner
@@ -606,6 +607,7 @@ u38_apocrypha={--Necrom Provided by art1ink
 U38_underweave_central={{.351,.619,3672,11}},
 u38_disquiet_study={{.452,.299,3672,14,541}},
 u38_quires_wind={{.564,.656,3672,15,542}},
+U38_CorpuscleBight_01_Base_0={{.424,.121,3672,16,543}},
 U38_CorpuscleBight_02_Base_0={{.424,.121,3672,16,543}},
 u38_apogee_wind={{.481,.471,3672,18,545}},
 u38_telvannipeninsula={
@@ -1494,6 +1496,7 @@ u38_telvannipeninsula={
 {.840,.343,8,4},--The House of Troubles
 {.449,.556,11,8},-- Where Magical Paths Meet
 {.588,.681,20,1},-- Ancestors and the Dunmer (Abridged)
+{.276,.493,20,3},--The Great Houses and Their Uses
 },
 u38_apocrypha={
 {.714,.854,17,1},--The Book of Daedra
@@ -1501,7 +1504,8 @@ u38_apocrypha={
 },
 u38_disquiet_study={{.491,.364,8,6}},--Modern Heretics
 u38_ciphersmidden_city={{.447,.46,8,9}},--Fragmentae Abyssum Hermaeus Morus
-u38_teldreloth_ext={{.418,.687,20,1}},-- Ancestors and the Dunmer (Abridged)
+u38_teldreloth_ext={{.418,.687,20,1}},--Ancestors and the Dunmer (Abridged)
+tlv_aldisra={{.747,.609,20,3}},--The Great Houses and Their Uses
 u38_Necrom={
 {.582,.524,8,4},--The House of Troubles
 {.36,.573,8,1},--Aedra and Daedra
@@ -5400,6 +5404,7 @@ local CustomPins={	--Types
 	[15]={name="pinType_Time_Rifts",done=false,id={},pin={},maxDistance=0.05,level=101,texture="/"..AddonName.."/Treasure_1-2.dds",k=1.8},
 	[16]={name="pinType_Shrines",done=false,id={},pin={},maxDistance=0.05,level=101,texture="/esoui/art/icons/poi/poi_daedricruin_incomplete.dds",k=1.25},
 	[17]={name="pinType_Fishing_Nodes",done=false,id={},pin={},maxDistance=0.05,level=101,texture="/esoui/art/icons/achievements_indexicon_fishing_up.dds",k=1.25},
+--	[17]={name="pinType_Fishing_Nodes_done",done=true,id={},pin={},maxDistance=0.05,level=101,texture="/esoui/art/icons/achievements_indexicon_fishing_up.dds",k=1.25},
 	[18]={section=true,name="pinType_Clockwork_City",id={},pin={},texture="/esoui/art/treeicons/tutorial_idexicon_cwc_up.dds",	--"/art/fx/texture/clockworksigil.dds",
 		[47]={name="pinType_Precursor_Maker",done=false,ach=1958,maxDistance=0.05,level=101,texture="/esoui/art/menubar/gamepad/gp_playermenu_icon_settings.dds",k=1,def_texture="/esoui/art/icons/achievement_update16_001.dds"},
 		},
@@ -6062,7 +6067,10 @@ local function OnAchievementUpdate(achievementId,link)
 		end
 	end
 end
-
+local function OnSkyshardsUpdated()
+    ZO_WorldMap_RefreshCustomPinsOfType(_G[CustomPins[3].name])
+    if COMPASS_PINS then COMPASS_PINS:RefreshPins(CustomPins[3].name) end
+end
 local function OnBookLearned(_,categoryIndex)
 	if categoryIndex==1 then
 		ZO_WorldMap_RefreshCustomPinsOfType(_G[CustomPins[5].name])
@@ -6213,6 +6221,11 @@ end
 local function RegisterEvents()
 	EVENT_MANAGER:RegisterForEvent(AddonName,EVENT_ACHIEVEMENT_UPDATED,function(_,achievementId,link) OnAchievementUpdate(achievementId)end)
 	EVENT_MANAGER:RegisterForEvent(AddonName,EVENT_ACHIEVEMENT_AWARDED,function(_,_,_,achievementId,link) OnAchievementUpdate(achievementId)end)
+	if SavedVars[3] then
+        EVENT_MANAGER:RegisterForEvent(AddonName, EVENT_SKYSHARDS_UPDATED, OnSkyshardsUpdated)
+    else
+        EVENT_MANAGER:UnregisterForEvent(AddonName, EVENT_SKYSHARDS_UPDATED)
+    end
 	if SavedVars[5] then
 		EVENT_MANAGER:RegisterForEvent(AddonName,EVENT_LORE_BOOK_LEARNED, OnBookLearned)
 	else

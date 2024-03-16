@@ -24,7 +24,6 @@ local Localization={
 		Time_Rifts="Time Rifts",
 		Shrines="Shrines",
 		Fishing_Nodes="Fishing nodes",
---		Fishing_Nodes_done="Fishing Nodes (done)",
 		Volendrung="Volendrung",
 		Antiquities="Antiquities",Antiquity_Leads="Antiquity leads",
 		Imperial_City="Imperial City",IC_Bosses="Bosses",IC_Respawns="Respawns",
@@ -62,7 +61,6 @@ local Localization={
 		Time_Rifts="Временные бреши",
 		Shrines="Алтари",
 		Fishing_Nodes="Рыбалка",
---		Fishing_Nodes_done="Рыбалка (выполнено)",
 		Volendrung="Волендранг",
 		Antiquities="Древности", Antiquity_Leads="Подсказки древностей",
 		Imperial_City="Имперский город",
@@ -104,7 +102,6 @@ local Localization={
 		Time_Rifts="Zeitrisse",
 		Shrines="Schreine",
 		Fishing_Nodes="Fischgründe",
---		Fishing_Nodes_done="Gesammelte Fischgründe",
 		Clockwork_City="Clockwork City",
 		Antiquities="Antiquitäten", Antiquity_Leads="Fundorte von Spuren",
 		IC_Bosses="Anführer",
@@ -134,7 +131,6 @@ local Localization={
 		Time_Rifts="Failles temporelles",
 		Shrines="Autels",
 		Fishing_Nodes="Trous de Pêche",
---		Fishing_Nodes_done="Trous de Pêche(fini)",
 		Volendrung="Volendrung",
 		Antiquities="Antiquités",Antiquity_Leads="Pistes d'antiquités",
 		Imperial_City="Cité impériale",IC_Bosses="Boss",IC_Respawns="Réapparitions",
@@ -172,7 +168,6 @@ local Localization={
 		Time_Rifts="Fendas Temporais",
 		Shrines="Santuários Vampiro/Lobisomem",
 		Fishing_Nodes="Locais de Pesca",
---		Fishing_Nodes_done="Locais de Pesca Coletados",
 		Volendrung="Volendrung",
 		Antiquities="Antiguidades", Antiquity_Leads="Pistas de Antiguidades",
 		Imperial_City="Cidade Imperial",
@@ -216,7 +211,6 @@ local Localization={
 		Time_Rifts="Розриви часу",
 		Shrines="Святині",
 		Fishing_Nodes="Місце для рибалки",
---		Fishing_Nodes_done="Місце для рибалки (виконано)",
 		Clockwork_City="Заводне місто",
 		Murkmire="Муркмайр",
 		Elsweyr="Ельсвейр",
@@ -257,7 +251,6 @@ local Localization={
 		Time_Rifts="Fenditure Temporali",
 		Shrines="Tempi",
 		Fishing_Nodes="Zone di Pesca",
---		Fishing_Nodes_done="Zone di Pesca trovati",
 		Clockwork_City="Città Meccanica",
 		Murkmire="Murkmire",
 		Elsweyr="Elsweyr",
@@ -1505,11 +1498,15 @@ u38_telvannipeninsula={
 {.588,.681,20,1},-- Ancestors and the Dunmer (Abridged)
 {.276,.493,20,3},--The Great Houses and Their Uses
 {.210,.499,20,6},--Mottos of the Dunmeri Great Houses
+{.814,.321,23,9},--Sanctioned Murder
 },
 u38_apocrypha={
 {.714,.854,17,1},--The Book of Daedra
+{.578,.742,8,6},--Modern Heretics
 {.577,.548,8,9}},--Fragmentae Abyssum Hermaeus Morus
 u38_disquiet_study={{.491,.364,8,6}},--Modern Heretics
+u38_NecromOutlawsRefuge={{.476,.535,23,9}},--Sanctioned Murder
+u38_NecromOutlawsRefuge02={{.476,.535,23,9}},--Sanctioned Murder
 u38_ciphersmidden_city={{.447,.46,8,9}},--Fragmentae Abyssum Hermaeus Morus
 u38_teldreloth_ext={{.418,.687,20,1}},--Ancestors and the Dunmer (Abridged)
 tlv_aldisra={
@@ -1519,6 +1516,7 @@ tlv_aldisra={
 u38_Necrom={
 {.593,.581,8,4},--The House of Troubles
 {.36,.573,8,1},--Aedra and Daedra
+{.486,.490,23,9},--Sanctioned Murder
 },
 --Firesong Provided by art1ink.
 u36_galenisland={
@@ -5417,7 +5415,6 @@ local CustomPins={	--Types
 	[15]={name="pinType_Time_Rifts",done=false,id={},pin={},maxDistance=0.05,level=101,texture="/"..AddonName.."/Treasure_1-2.dds",k=1.8},
 	[16]={name="pinType_Shrines",done=false,id={},pin={},maxDistance=0.05,level=101,texture="/esoui/art/icons/poi/poi_daedricruin_incomplete.dds",k=1.25},
 	[17]={name="pinType_Fishing_Nodes",done=false,id={},pin={},maxDistance=0.05,level=101,texture="/esoui/art/icons/achievements_indexicon_fishing_up.dds",k=1.25},
---	[17]={name="pinType_Fishing_Nodes_done",done=true,id={},pin={},maxDistance=0.05,level=101,texture="/esoui/art/icons/achievements_indexicon_fishing_up.dds",k=1.25},
 	[18]={section=true,name="pinType_Clockwork_City",id={},pin={},texture="/esoui/art/treeicons/tutorial_idexicon_cwc_up.dds",	--"/art/fx/texture/clockworksigil.dds",
 		[47]={name="pinType_Precursor_Maker",done=false,ach=1958,maxDistance=0.05,level=101,texture="/esoui/art/menubar/gamepad/gp_playermenu_icon_settings.dds",k=1,def_texture="/esoui/art/icons/achievement_update16_001.dds"},
 		},
@@ -6500,7 +6497,7 @@ local PinTooltipCreator={
 	end
 }
 local function MakeMapFiltersScroll()
---	local WORLD_MAP_FILTERS = ZO_InitializingObject:Subclass()  -- Add this line into the MakeMapFiltersScroll function.
+local WORLD_MAP_FILTERS = ZO_InitializingObject:Subclass()  -- Add this line into the MakeMapFiltersScroll function.
  	if WORLD_MAP_FILTERS.pvePanel then
 		if WORLD_MAP_FILTERS.pvePanel.checkBoxPool then
 			WORLD_MAP_FILTERS.pvePanel.checkBoxPool.parent=ZO_WorldMapFiltersPvEContainerScrollChild or WINDOW_MANAGER:CreateControlFromVirtual("ZO_WorldMapFiltersPvEContainer",ZO_WorldMapFiltersPvE,"ZO_ScrollContainer"):GetNamedChild("ScrollChild")
@@ -6559,7 +6556,7 @@ local function MakeMapFiltersScroll()
 
 	if WORLD_MAP_FILTERS.imperialPvPPanel then
 		if WORLD_MAP_FILTERS.imperialPvPPanel.checkBoxPool then
-			WORLD_MAP_FILTERS.imperialPvPPanel.checkBoxPool.parent=ZO_WorldMapFiltersImperialPvPContainerScrollChild or WINDOW_MANAGER:CreateControlFromVirtual("ZO_WorldMapFiltersImperialPvPContainer",ZO_WorldMapFiltersPvP,"ZO_ScrollContainer"):GetNamedChild("ScrollChild")
+			WORLD_MAP_FILTERS.imperialPvPPanel.checkBoxPool.parent=ZO_WorldMapFiltersImperialPvPContainerScrollChild or WINDOW_MANAGER:CreateControlFromVirtual("ZO_WorldMapFiltersImperialPvPContainer",ZO_WorldMapFiltersImperialPvP,"ZO_ScrollContainer"):GetNamedChild("ScrollChild")
 			for i,control in pairs(WORLD_MAP_FILTERS.imperialPvPPanel.checkBoxPool.m_Active) do
 				control:SetParent(WORLD_MAP_FILTERS.imperialPvPPanel.checkBoxPool.parent)
 			end
@@ -6571,7 +6568,7 @@ local function MakeMapFiltersScroll()
 			end
 		end
 		if WORLD_MAP_FILTERS.imperialPvPPanel.comboBoxPool then
-			WORLD_MAP_FILTERS.imperialPvPPanel.comboBoxPool.parent=ZO_WorldMapFiltersImperialPvPContainerScrollChild or WINDOW_MANAGER:CreateControlFromVirtual("ZO_WorldMapFiltersImperialPvPContainer",ZO_WorldMapFiltersPvP,"ZO_ScrollContainer"):GetNamedChild("ScrollChild")
+			WORLD_MAP_FILTERS.imperialPvPPanel.comboBoxPool.parent=ZO_WorldMapFiltersImperialPvPContainerScrollChild or WINDOW_MANAGER:CreateControlFromVirtual("ZO_WorldMapFiltersImperialPvPContainer",ZO_WorldMapFiltersImperialPvP,"ZO_ScrollContainer"):GetNamedChild("ScrollChild")
 			for i,control in pairs(WORLD_MAP_FILTERS.imperialPvPPanel.comboBoxPool.m_Active) do
 				control:SetParent(WORLD_MAP_FILTERS.imperialPvPPanel.comboBoxPool.parent)
 			end

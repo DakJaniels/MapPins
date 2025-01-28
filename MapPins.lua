@@ -6365,14 +6365,20 @@ local function OnAchievementUpdate(achievementId,link)
 		end
 	end
 end
+--test bosses
+ local function OnDelveBossesUpdated()
+    ZO_WorldMap_RefreshCustomPinsOfType(_G[CustomPins[1].name])
+    if COMPASS_PINS then COMPASS_PINS:RefreshPins(CustomPins[1].name) end
+    end
+--testb bosses
 local function OnSkyshardsUpdated()
     ZO_WorldMap_RefreshCustomPinsOfType(_G[CustomPins[3].name])
     if COMPASS_PINS then COMPASS_PINS:RefreshPins(CustomPins[3].name) end
 end
 local function OnBookLearned(_,categoryIndex)
 	if categoryIndex==1 then
-		ZO_WorldMap_RefreshCustomPinsOfType(_G[CustomPins[5].name])
-		if COMPASS_PINS then COMPASS_PINS:RefreshPins(CustomPins[5].name) end
+	ZO_WorldMap_RefreshCustomPinsOfType(_G[CustomPins[5].name])
+	if COMPASS_PINS then COMPASS_PINS:RefreshPins(CustomPins[5].name) end
 	end
 end
 
@@ -6519,6 +6525,13 @@ end
 local function RegisterEvents()
 	EVENT_MANAGER:RegisterForEvent(AddonName,EVENT_ACHIEVEMENT_UPDATED,function(_,achievementId,link) OnAchievementUpdate(achievementId)end)
 	EVENT_MANAGER:RegisterForEvent(AddonName,EVENT_ACHIEVEMENT_AWARDED,function(_,_,_,achievementId,link) OnAchievementUpdate(achievementId)end)
+-- test boss
+	if SavedVars[1] then
+        EVENT_MANAGER:RegisterForEvent(AddonName, EVENT_DELVE_BOSSES_UPDATED, OnDelveBossesUpdated)
+    else
+        EVENT_MANAGER:UnregisterForEvent(AddonName, EVENT_DELVE_BOSSES_UPDATED)
+    end
+-- test boss
 	if SavedVars[3] then
         EVENT_MANAGER:RegisterForEvent(AddonName, EVENT_SKYSHARDS_UPDATED, OnSkyshardsUpdated)
     else

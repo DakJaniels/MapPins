@@ -6406,7 +6406,7 @@ end
 local function CheckQuestData(x,y,zone)
 	if not zone then return end
 	local delta=0.03
-	mapData=CustomChestData[zone]
+	local mapData=CustomChestData[zone]
 	if mapData then
 		for i,data in pairs(mapData) do
 			if math.abs(data[1]-x)<delta and math.abs(data[2]-y)<delta then
@@ -6490,7 +6490,7 @@ local function OnInteract(_,result,TargetName)
 		if zone then
 			local x,y,_=GetMapPlayerPosition("player") x=math.floor(x*10000)/10000 y=math.floor(y*10000)/10000
 			local delta=0.03
-			mapData=TimeBreach[zone]
+			local mapData=TimeBreach[zone]
 			if mapData then
 				for i,data in ipairs(mapData) do
 					if math.abs(data[1]-x)<delta and math.abs(data[2]-y)<delta then
@@ -6692,7 +6692,7 @@ local function AddPinFilter(i)
 	end
 	--pvpPanel
 	if PinsAva[i] then
-		control=AddCheckbox(WORLD_MAP_FILTERS.pvpPanel)
+		local control=AddCheckbox(WORLD_MAP_FILTERS.pvpPanel)
 		if control then
 			ZO_CheckButton_SetToggleFunction(control,function(self,state) SavedVars[i]=state SetEnabled(self,state) end)
 			SetEnabled(control,SavedVars[i],true)
@@ -6700,7 +6700,7 @@ local function AddPinFilter(i)
 	end
 	--imperialPvPPanel
 	if PinsImperial[i] then
-		control=AddCheckbox(WORLD_MAP_FILTERS.imperialPvPPanel)
+		local control=AddCheckbox(WORLD_MAP_FILTERS.imperialPvPPanel)
 		if control then
 			ZO_CheckButton_SetToggleFunction(control,function(self,state) SavedVars[i]=state SetEnabled(self,state) end)
 			SetEnabled(control,SavedVars[i],true)

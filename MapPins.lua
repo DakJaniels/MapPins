@@ -278,11 +278,11 @@ local Localization={
 		Necrom="Necrom",
 		Gold_Road="Gold Road",
 		},
-	es={--provided by EthanC-Sleepzone
+es={--provided by EthanC-Sleepzone 1.98.5
 		-- Agua
-		Lake = "Lago", Foul = "Impura", River = "Río", Salt = "Salada", Oily = "Aceitosa", Mystic = "Mística", Running = "Corriente",
+		Lake = "Lago", Foul = "Sucia", River = "Río", Salt = "Salada", Oily = "Aceitosa", Mystic = "Mística", Running = "Corriente",
 		-- Portales
-		Portals = "Portales", Celestial_Rifts = "Grietas celestiales", Dark_Fissures = "Fisuras oscuras", Oblivion_Portals = "Portales de Oblivion", Shadow_Fissures = "Fisuras sombrías", Lava_Lashers = "Azotadores de lava",
+		Portals = "Portales", Celestial_Rifts = "Fisuras celestiales", Dark_Fissures = "Fisuras oscuras", Oblivion_Portals = "Portales de Oblivion", Shadow_Fissures = "Fisuras sombrías", Lava_Lashers = "Apaciguador de la lava",
 		-- Filtros
 		Delve_bosses = "Jefes de mazmorras", Delve_bosses_done = "Jefes de mazmorras (completados)",
 		Skyshards = "Fragmentos del cielo", Skyshards_done = "Fragmentos del cielo (recogidos)",
@@ -297,7 +297,7 @@ local Localization={
 		Volendrung = "Volendrung",
 		Antiquities = "Antigüedades", Antiquity_Leads = "Pistas de antigüedades",
 		Imperial_City = "Ciudad Imperial", IC_Bosses = "Jefes", IC_Respawns = "Reapariciones",
-		Cunning_Scamp = "Tramposo astuto", Trove_Scamp = "Bribón del tesoro",
+		Cunning_Scamp = "Diablillos astutos", Trove_Scamp = "Diablillos del tesoro",
 		World_achievements = "Logros del mundo",
 		Orsinium_world_event = "Encuentros aleatorios",
 		Summerset_world_event = "Encuentros aleatorios",
@@ -306,7 +306,7 @@ local Localization={
 		Orsinium = "Orsinium",
 		Thieves_guild = "Gremio de ladrones",
 		Morrowind = "Morrowind",
-		Summerset = "Summerset",
+		Summerset = "Estivalia",
 		Clockwork_City = "Ciudad Mecánica",
 		Murkmire = "Murkmire",
 		Elsweyr = "Elsweyr",
@@ -4545,7 +4545,7 @@ mtharnaz={[1]={{.510,.375},{.506,.383},{.173,.663},{.860,.663},{.376,.518},{.860
 muckvalleycavern={[1]={{.698,.213},{.134,.783},{.708,.383},{.411,.714},{.7,.198},{.232,.764},{.849,.286},{.224,.761},{.387,.784},{.123,.767},{.629,.370},{.415,.696},{.353,.440},{.516,.611},{.401,.699},{.164,.656},{.717,.368},{.378,.831},{.350,.717},{.365,.641},{.327,.452},{.378,.831},{.135,.761},{.358,.724},{.398,.782},{.510,.614},{.703,.206},{.364,.657},{.220,.768},{.384,.798},{.620,.361},{.359,.710},{.422,.700},{.691,.209},{.378,.847},{.164,.656},{.706,.366},{.623,.379},{.328,.436},{.408,.692},{.857,.292},{.169,.648},{.342,.720}}},
 mudtreemine={[1]={{.779,.580},{.592,.434},{.781,.596}}},
 murciensclaim={[1]={{.654,.208},{.231,.359},{.662,.204},{.588,.408},{.223,.188},{.814,.296},{.520,.638},{.340,.092},{.448,.091},{.687,.310},{.520,.307},{.160,.459},{.647,.206},{.776,.445},{.222,.349},{.337,.353},{.515,.234},{.574,.415},{.621,.258},{.771,.452},{.120,.312},{.326,.354},{.218,.202},{.514,.629},{.337,.596},{.303,.661},{.570,.320},{.689,.318},{.291,.362},{.515,.298},{.155,.465},{.282,.354},{.466,.093},{.332,.585},{.338,.100},{.575,.315}}},
-murkmire={[1]={{.168,.432},{.203,.284},{.239,.511},{.293,.319},{.327,.374},{.337,.405},{.339,.503},{.341,.267},{.364,.604},{.375,.336},{.382,.526},{.388,.484},{.398,.535},{.410,.405},{.452,.739},{.479,.643},{.488,.492},{.500,.654},{.541,.561},{.564,.637},{.577,.599},{.593,.428},{.616,.578},{.643,.642},{.647,.425},{.675,.366},{.678,.281},{.721,.273},{.734,.335},{.740,.637},{.778,.425},{.819,.672},{.847,.633},{.910,.973},{.94,.352},{.945,.781},}},
+murkmire={[1]={{.168,.432},{.203,.284},{.239,.511},{.276,.628},{.293,.319},{.293,.654},{.317,.675},{.327,.374},{.337,.405},{.339,.503},{.341,.267},{.364,.604},{.375,.336},{.382,.526},{.383,.729},{.384,.715},{.388,.484},{.398,.535},{.41,.405},{.443,.644},{.452,.739},{.479,.647},{.488,.492},{.500,.654},{.510,.734},{.541,.561},{.543,.772},{.564,.637},{.577,.599},{.581,.495},{.616,.578},{.643,.642},{.645,.752},{.647,.425},{.654,.293},{.661,.674}, {.675,.317},{.675,.366},{.678,.281},{.684,.847},{.721,.273},{.734,.335},{.74,.637},{.751,.646},{.778,.425},{.819,.672},{.847,.633},{.91,.973},{.94,.352},{.945,.781}}},
 narilnagaia={[1]={{.490,.353},{.791,.722},{.521,.597},{.168,.565},{.320,.495},{.208,.369},{.51,.835},{.463,.475},{.194,.366},{.540,.221},{.702,.677},{.492,.350},{.700,.668},{.526,.214},{.526,.227},{.453,.476},{.307,.499},{.781,.727},{.505,.367},{.460,.485},{.205,.362},{.531,.222}}},
 narsis={[1]={{.331,.205},{.282,.373},{.821,.959},{.965,.465},{.898,.652},{.339,.203}},[2]={{.427,.431},{.433,.437}}},
 nchuleft2={[1]={{.637,.507},{.659,.513},{.65,.502},{.640,.497},{.645,.515}}},
